@@ -7,7 +7,9 @@ public class level1 {
     String[][] map;
     int numberOfCoordinates;
     List<String[]> coordinates = new ArrayList<>();
+    protected level1() {
 
+    }
     public level1(String path) throws IOException {
         List<String> input = FileHelper.readFileByLine(path);
 
@@ -22,6 +24,11 @@ public class level1 {
                 map[i][s] = String.valueOf(line.charAt(s));
             }
         }
+        readCoordinates(input);
+    }
+
+    protected void readCoordinates(List<String> input)
+    {
         for(int i = size + 2; i < input.size(); i++)
         {
             this.numberOfCoordinates = Integer.parseInt(input.get(size + 1));
@@ -29,7 +36,7 @@ public class level1 {
         }
     }
 
-    public void writeTileType(String path) throws IOException {
+    protected void writeTileType(String path) throws IOException {
         List<String> result = new ArrayList<>();
         for (String[] coordinate : coordinates) {
             result.add(map[Integer.parseInt(coordinate[1])][Integer.parseInt(coordinate[0])]);
