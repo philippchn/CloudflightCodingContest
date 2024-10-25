@@ -1,3 +1,5 @@
+package CCC38;
+
 import java.io.IOException;
 import java.util.*;
 
@@ -21,7 +23,7 @@ public class level2 extends level1{
     }
 
     @Override
-    protected void readCoordinates(List<String> input)
+    public void readCoordinates(List<String> input)
     {
         for(int i = size + 2; i < input.size(); i++)
         {
@@ -31,7 +33,7 @@ public class level2 extends level1{
     }
 
     @Override
-    protected void writeTileType(String path) throws IOException {
+    public void writeTileType(String path) throws IOException {
         List<String> result = new ArrayList<>();
         for (String[] coordinate : coordinates) {
             String type = checkType(

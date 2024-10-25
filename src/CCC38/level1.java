@@ -1,3 +1,5 @@
+package CCC38;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +29,7 @@ public class level1 {
         readCoordinates(input);
     }
 
-    protected void readCoordinates(List<String> input)
+    public void readCoordinates(List<String> input)
     {
         for(int i = size + 2; i < input.size(); i++)
         {
@@ -36,7 +38,7 @@ public class level1 {
         }
     }
 
-    protected void writeTileType(String path) throws IOException {
+    public void writeTileType(String path) throws IOException {
         List<String> result = new ArrayList<>();
         for (String[] coordinate : coordinates) {
             result.add(map[Integer.parseInt(coordinate[1])][Integer.parseInt(coordinate[0])]);
