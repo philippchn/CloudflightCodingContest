@@ -1,1 +1,1 @@
-# 38CCC
+# Cloudflight Coding Contest 
